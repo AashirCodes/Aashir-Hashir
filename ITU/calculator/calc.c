@@ -149,3 +149,4 @@ void clearScreen() {
         system("clear");
     #endif
 }
+//working and completed!
