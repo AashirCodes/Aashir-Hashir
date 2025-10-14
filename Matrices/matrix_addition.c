@@ -4,7 +4,6 @@
 void printArray(const int array[][COLUMNS]);
 void inputArray(int array[][COLUMNS]);
 void sumArrays(int array[][COLUMNS], int array1[][COLUMNS]);
-void productOfArrays(int array[][COLUMNS], int array1[][COLUMNS]);
 int main()  {
   int matrix1[ROWS][COLUMNS] = {};
   int matrix2[ROWS][COLUMNS] = {};
@@ -27,9 +26,6 @@ int main()  {
   puts("The sum of Matrix 1 and Matrix 2 is:");
   
   sumArrays(matrix1, matrix2);
-  puts("");
-  puts("Product of Matrix 1 and Matrix 2 is: ");
-  productOfArrays(matrix1, matrix2);
 }
 void printArray(const int array[][COLUMNS])  {
   for (size_t i = 0; i < ROWS; i++) {
@@ -57,20 +53,4 @@ void sumArrays(int array[][COLUMNS], int array1[][COLUMNS])  {
   }
   printArray(result);
 }
-void productOfArrays(int array[][COLUMNS], int array1[][COLUMNS]) {
-  int product[ROWS][COLUMNS] = {0};
-  int sum = 0;
-  for (int i = 0; i < ROWS; i++) {
-    for (int j =0 ; j < COLUMNS; j++)  {
-      for (int k = 0; k < COLUMNS; k++) {
-        sum += array[i][k] * array1[k][j];
-      }
-      product[i][j] = sum;
-      sum = 0;
-
-
-    }
-  }
-  
-  printArray(product);
-}
+//working and complete
